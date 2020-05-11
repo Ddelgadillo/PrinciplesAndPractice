@@ -11,12 +11,12 @@ int main()
 	two.ReadNames();
 	two.ReadAges();
 
-	if (one == two)
+	if (one != two)
 	{
-		std::cout << "True!";
+		std::cout << "False!";
 	}
 	else
 	{
-		std::cout << "False!";
+		std::cout << "True!";
 	}
 }
