@@ -44,4 +44,16 @@ void NamePairs::Print()
 
 void NamePairs::Sort()
 {
+	for (int i = 0; i < name.size(); i++)
+	{
+		for (int j = 0; j < name.size() - i - 1; j++)
+		{
+			if (name.at(j) > name.at(j + 1))
+			{
+				std::string tempName = name.at(j);
+				name.at(j) = name.at(j + 1);
+				name.at(j + 1) = tempName;
+			}
+		}
+	}
 }
