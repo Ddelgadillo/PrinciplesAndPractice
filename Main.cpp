@@ -5,5 +5,6 @@ int main()
 	NamePairs one;
 
 	one.ReadNames();
+	one.ReadAges();
 	one.Print();
 }
