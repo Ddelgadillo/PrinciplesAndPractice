@@ -3,10 +3,20 @@
 int main()
 {
 	NamePairs one;
+	NamePairs two;
 
 	one.ReadNames();
 	one.ReadAges();
-	one.Print();
-	one.Sort();
-	one.Print();
+
+	two.ReadNames();
+	two.ReadAges();
+
+	if (one == two)
+	{
+		std::cout << "True!";
+	}
+	else
+	{
+		std::cout << "False!";
+	}
 }
