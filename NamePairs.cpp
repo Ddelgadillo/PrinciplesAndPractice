@@ -57,3 +57,13 @@ void NamePairs::Sort()
 		}
 	}
 }
+
+bool NamePairs::operator==(NamePairs& pairs)
+{
+	if (name == pairs.name && age == pairs.age)
+	{
+		return true;
+	}
+
+	return false;
+}
