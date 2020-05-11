@@ -21,13 +21,24 @@ void NamePairs::ReadNames()
 
 void NamePairs::ReadAges()
 {
+	double tempAge;
+
+	for (std::string name : name)
+	{
+		std::cout << "Enter age for " << name << ": ";
+		std::cin >> tempAge;
+
+		age.push_back(tempAge);
+	}
 }
 
 void NamePairs::Print()
 {
+	std::cout << "\n";
+
 	for (int i = 0; i < name.size(); i++)
 	{
-		std::cout << name.at(i) << ", " << std::endl;//age.at(i);
+		std::cout << name.at(i) << ", " << age.at(i) << std::endl;
 	}
 }
 
