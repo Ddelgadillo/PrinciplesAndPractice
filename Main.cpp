@@ -7,4 +7,6 @@ int main()
 	one.ReadNames();
 	one.ReadAges();
 	one.Print();
+	one.Sort();
+	one.Print();
 }
