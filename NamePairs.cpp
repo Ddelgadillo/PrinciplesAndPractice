@@ -8,7 +8,7 @@ void NamePairs::ReadNames()
 	do
 	{
 		std::cout << "Please enter name: " << std::endl;
-		std::cin >> tempName;
+		std::getline(std::cin, tempName);
 
 		name.push_back(tempName);
 
@@ -58,7 +58,7 @@ void NamePairs::Sort()
 	}
 }
 
-bool NamePairs::operator==(NamePairs& pairs)
+bool NamePairs::operator==(const NamePairs& pairs) const
 {
 	if (name == pairs.name && age == pairs.age)
 	{
@@ -66,4 +66,9 @@ bool NamePairs::operator==(NamePairs& pairs)
 	}
 
 	return false;
+}
+
+bool NamePairs::operator!=(const NamePairs& pairs) const
+{
+	return (!((*this) == pairs));
 }
