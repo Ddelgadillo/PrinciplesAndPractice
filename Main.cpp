@@ -7,16 +7,6 @@ int main()
 
 	one.ReadNames();
 	one.ReadAges();
-
-	two.ReadNames();
-	two.ReadAges();
-
-	if (one != two)
-	{
-		std::cout << "False!";
-	}
-	else
-	{
-		std::cout << "True!";
-	}
+	one.Sort();
+	one.Print();
 }
