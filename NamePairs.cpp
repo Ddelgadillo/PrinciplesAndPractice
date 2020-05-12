@@ -7,16 +7,18 @@ void NamePairs::ReadNames()
 
 	do
 	{
-		std::cout << "Please enter name: " << std::endl;
+		std::cout << "Please enter name: ";
 		std::getline(std::cin, tempName);
 
 		name.push_back(tempName);
 
 		std::cout << "Add another(Y or N)? ";
 		std::cin >> ans;
-		std::cout << "\n";
+		std::cin.ignore();
 
 	} while (ans == 'y' or ans == 'Y');
+
+	std::cout << std::endl;
 }
 
 void NamePairs::ReadAges()
@@ -27,9 +29,12 @@ void NamePairs::ReadAges()
 	{
 		std::cout << "Enter age for " << name << ": ";
 		std::cin >> tempAge;
+		std::cin.ignore();
 
 		age.push_back(tempAge);
 	}
+
+	std::cout << std::endl;
 }
 
 void NamePairs::Print()
@@ -53,6 +58,10 @@ void NamePairs::Sort()
 				std::string tempName = name.at(j);
 				name.at(j) = name.at(j + 1);
 				name.at(j + 1) = tempName;
+
+				double tempAge = age.at(j);
+				age.at(j) = age.at(j + 1);
+				age.at(j + 1) = tempAge;
 			}
 		}
 	}
