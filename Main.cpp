@@ -1,4 +1,5 @@
 #include "NamePairs.h"
+#include<iostream>
 
 int main()
 {
@@ -8,5 +9,7 @@ int main()
 	one.ReadNames();
 	one.ReadAges();
 	one.Sort();
-	one.Print();
+	//one.Print();
+
+	std::cout << one;
 }
