@@ -37,7 +37,7 @@ void NamePairs::ReadAges()
 	std::cout << std::endl;
 }
 
-void NamePairs::Print()
+void NamePairs::Print() const
 {
 	std::cout << "\n";
 
@@ -80,4 +80,13 @@ bool NamePairs::operator==(const NamePairs& pairs) const
 bool NamePairs::operator!=(const NamePairs& pairs) const
 {
 	return (!((*this) == pairs));
+}
+
+std::ostream& operator<<(std::ostream& output, const NamePairs& pair)
+{
+	for (int i = 0; i < pair.name.size(); i++)
+	{
+		output << pair.name.at(i) << ", " << pair.age.at(i) << std::endl;
+	}
+	return output;
 }
