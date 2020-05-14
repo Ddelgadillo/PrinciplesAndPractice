@@ -11,7 +11,11 @@ public:
 	std::string GetAuthor() const;
 	int GetCopyrightDate() const;
 	bool GetCheckedOut() const;
-private:
+	void SetCheckout(bool checkout);
+	bool operator==(const Book& book) const;
+	bool operator!= (const Book & book) const;
+	friend std::ostream& operator<<(std::ostream& output, const Book& book);
+protected:
 	std::string mISBN;
 	std::string mTitle;
 	std::string mAuthor;
