@@ -1,15 +1,8 @@
-#include "NamePairs.h"
 #include<iostream>
+#include "NamePairs.h"
+#include "Book.h"
 
 int main()
 {
-	NamePairs one;
-	NamePairs two;
-
-	one.ReadNames();
-	one.ReadAges();
-	one.Sort();
-	//one.Print();
-
-	std::cout << one;
+	Book theStand("3-5-6-X", "The Stand", "Stephen King", 1992);
 }
