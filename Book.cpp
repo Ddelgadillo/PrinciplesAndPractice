@@ -55,3 +55,25 @@ bool Book::GetCheckedOut() const
 {
 	return checkedOut;
 }
+
+void Book::SetCheckout(bool checkout)
+{
+	checkedOut = checkout;
+}
+
+bool Book::operator==(const Book& book) const
+{
+	return mISBN == book.mISBN;
+}
+
+bool Book::operator!=(const Book& book) const
+{
+	return mISBN != book.mISBN;
+}
+
+std::ostream& operator<<(std::ostream& output, const Book& book)
+{
+	output << "Title: " << book.mTitle << "\nAuthor: " << book.mAuthor << "\nISBN: " << book.mISBN << "\nCopyright: " << book.mCopyrightDate << std::endl;
+
+	return output;
+}
