@@ -1,9 +1,10 @@
 #include "Book.h"
 
-Book::Book(std::string isbn, std::string title, std::string author, int copyrightDate) :
+Book::Book(std::string isbn, std::string title, std::string author, Genre genre, int copyrightDate) :
 	mISBN(isbn), 
 	mTitle(title),
-	mAuthor(author), 
+	mAuthor(author),
+	mGenre(genre),
 	mCopyrightDate(copyrightDate)
 {
 	for (int i = 0; i < mISBN.size() - 1; i += 2)
